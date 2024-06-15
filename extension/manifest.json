@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Cover Letter",
+    "version": "1.0",
+    "description": "Automatically writes cover letters based on your profile and job details.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "notifications",
+        "sidePanel"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.upwork.com/*",
+                "https://www.python.org/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "sidebar.css"
+            ]
+        }
+    ],
+    "side_panel": {
+        "default_path": "sidepanel.html"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    }
+}

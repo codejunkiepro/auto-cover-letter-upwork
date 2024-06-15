@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto Cover Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #container {
+            padding: 20px;
+        }
+        #loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+        }
+        #coverLetterContainer, #answersContainer {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        #coverLetterContainer h2, #answersContainer h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #333;
+            border-bottom: 2px solid #f4f4f4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .question {
+            font-weight: bold;
+            color: #333;
+        }
+        .answer {
+            margin-bottom: 15px;
+            color: #666;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .notification {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="loading">Generating cover letter, please wait...</div>
+        <div id="coverLetterContainer">
+            <h2>Generated Cover Letter</h2>
+            <div id="coverLetterContent"></div>
+        </div>
+        <div id="answersContainer">
+            <h2>Client Questions and Answers</h2>
+            <div id="answersContent"></div>
+        </div>
+    </div>
+    <div id="notification" class="notification">Copied to clipboard!</div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>

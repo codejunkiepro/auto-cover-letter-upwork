@@ -1,0 +1,4 @@
+.env
+
+# Ignore the actual user profile data file
+user_profile.py
